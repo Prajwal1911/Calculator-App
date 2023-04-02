@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+body {
+  margin: 25px;
+  font-family: "Helvetica Neue", sans-serif;
+  position: relative;
+}
+.parent-container {
+  display: block;
+  width: 400px;
+  /* center the parent container horizontally */
+  margin: 0 auto;
+}
+/* calculator Container */
+.calculator {
+  display: block;
+
+  text-align: center;
+  justify-content: center;
+  width: 380px;
+  background: #63c9eb;
+  height: 690px;
+  border-radius: 40px;
+  color: white;
+  padding: 19px;
+  position: absolute;
+}
+/* Calculator name */
+.calc-name {
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: sans-serif;
+  justify-content: center;
+  text-align: center;
+  height: 10%;
+  /* color: #333; */
+}
+.calc-name h1 {
+  margin: 8px;
+  padding: 8px;
+}
+/* Dispaly Container */
+.display {
+  margin-bottom: 15px;
+  height: 118px;
+  margin-right: 5px;
+}
+.display input {
+  text-align: right;
+  width: 100%;
+  height: 70%;
+  font-size: 68px;
+  font-weight: 300;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+}
+
+/* Button Styling */
+.buttons-container {
+  display: grid;
+
+  /* fr will take the size equally */
+  grid-template-rows: repeat(5, 1fr);
+  /* OR */
+  /* grid-template-rows:repeat(5,110px) ; */
+
+  /* grid-template-columns: 110px 110px 110px 110px ; */
+  /* or */
+  grid-template-columns: repeat(4, 1fr);
+
+  /* grid gap */
+  grid-gap: 20px;
+}
+
+.button {
+  height: 70px;
+  width: 70px;
+  font-size: 25px;
+  border-radius: 50%;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: filter 0.2s;
+  cursor: pointer;
+}
+
+.button.function {
+  color: black;
+  background: #a5a5a5;
+}
+.button.operator {
+  background: #f1a33c;
+}
+
+.button.num-0 {
+  width: 160px;
+  border-radius: 50px;
+  justify-content: flex-start;
+  padding: 22px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  /* OR shorthand : it stops before col 3*/
+  /* grid-column: 1/3; */
+}
+
+.button:active,
+.button:focus {
+  filter: brightness(130%);
+}
+
+.mode {
+  position: absolute;
+  cursor: pointer;
+  bottom: 12px;
+  right: 12px;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-content: center;
+  border-radius: 25px;
+  border-bottom-left-radius: 1px;
+  /* background: var(--mode-bk); */
+}
+.fa-moon {
+  color: black;
+}
+.fa-sun {
+  color: #63c9eb;
+}
+.colorred {
+  background: black;
+}
+
+@media screen and (max-width: 400px) {
+  .calculator {
+    text-align: center;
+    justify-content: center;
+  }
+}

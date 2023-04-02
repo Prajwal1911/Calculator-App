@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CALCULATOR App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="parent-container">
+      <div class="calculator">
+        <div class="calc-name">
+          <h1>CALCULATOR</h1>
+        </div>
+        <div class="display">
+          <input type="text" readonly id="res" placeholder="0.0" />
+        </div>
+        <div class="buttons-container">
+          <div class="button function ac" onclick="res.value = ''">AC</div>
+          <div
+            class="button function del"
+            onclick="res.value = res.value.substring(0, res.value.length - 1)"
+          >
+            <i class="fa-solid fa-delete-left"></i>
+          </div>
+          <div class="button function per" onclick="res.value += '%'">%</div>
+          <div class="button operator div" onclick="res.value += '&#247;'">
+            &#247;
+          </div>
+          <div class="button num-7" onclick="res.value += 7">7</div>
+          <div class="button num-8" onclick="res.value += 8">8</div>
+          <div class="button num-9" onclick="res.value += 9">9</div>
+          <div class="button operator mult" onclick="res.value += '&#215;'">
+            &#215;
+          </div>
+          <div class="button num-4" onclick="res.value += 4">4</div>
+          <div class="button num-5" onclick="res.value += 5">5</div>
+          <div class="button num-6" onclick="res.value += 6">6</div>
+          <div class="button operator sub" onclick="res.value += '-'">-</div>
+          <div class="button num-1" onclick="res.value += 1">1</div>
+          <div class="button num-2" onclick="res.value += 2">2</div>
+          <div class="button num-3" onclick="res.value += 3">3</div>
+          <div class="button operator add" onclick="res.value += '+'">+</div>
+          <div class="button num-0" onclick="res.value += 0">0</div>
+          <div class="button decimal" onclick="res.value += '.'">.</div>
+          <div class="button operator equal" onclick="calc()">=</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
